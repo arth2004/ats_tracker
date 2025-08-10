@@ -135,7 +135,7 @@ const Details = ({ feedback }: { feedback: Feedback }) => {
             />
           </AccordionHeader>
           <AccordionContent itemId="structure">
-            <CategoryContent tips={feedback.structure.tips} />
+            <CategoryContent tips={feedback.structure.tips.filter(tip => tip.type === "good" || tip.type === "improve")} />
           </AccordionContent>
         </AccordionItem>
         <AccordionItem id="skills">
